@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    
+        let boxHTML = `
+        <div class="box">
+            <div class="heading">${heading}</div>
+            <div class="description">${description}</div>
+            <div class="status">${status}</div>
+            <div class="box-container">
+                <div class="box-item">
+                    <div class="box-label">Number of categories</div>
+                    <div class="box-value black">${categories.black}</div>
+                    <div class="box-value blue">${categories.blue}</div>
+                </div>
+                <div class="box-item">
+                    <div class="box-label">Number of validate packages</div>
+                    <div class="box-value black">${validatePackages.black}</div>
+                    <div class="box-value blue">${validatePackages.blue}</div>
+                </div>
+                <div class="box-item">
+                    <div class="box-label">Tests of push and pull</div>
+                    <div class="box-value black">${tests.pushAndPull.black}</div>
+                    <div class="box-value red">${tests.pushAndPull.red}</div>
+                </div>
+                <div class="box-item">
+                    <div class="box-label">Validate links</div>
+                    <div class="box-value black">${tests.validateLinks.black}</div>
+                    <div class="box-value red">${tests.validateLinks.red}</div>
+                </div>
+                <div class="box-item">
+                    <div class="box-label">Tests of validate package</div>
+                    <div class="box-value black">${tests.validatePackage.black}</div>
+                    <div class="box-value green">${tests.validatePackage.green}</div>
+                </div>
+            </div>
+        </div>
+        `;
+    
+        return boxHTML;
+    }
+    
+    document.body.innerHTML = generateBox();
+    
+</body>
+</html>
